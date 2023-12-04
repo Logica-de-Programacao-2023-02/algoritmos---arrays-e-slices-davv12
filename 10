@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	slice := []int{5, 10, 3, 8, 15, 2, 7, 12, 1, 9}
+
+	valorMinimo := math.MaxInt
+	valorMaximo := math.MinInt
+
+	for _, valor := range slice {
+		if valor < valorMinimo {
+			valorMinimo = valor
+		}
+		if valor > valorMaximo {
+			valorMaximo = valor
+		}
+	}
+
+	fmt.Printf("Valor mínimo no Slice: %d\n", valorMinimo)
+	fmt.Printf("Valor máximo no Slice: %d\n", valorMaximo)
+}
