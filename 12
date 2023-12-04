@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [5]int{2, 6, 9, 12, 15}
+
+	var multiplosDe3 []int
+
+	for _, valor := range array {
+		if valor%3 == 0 {
+			multiplosDe3 = append(multiplosDe3, valor)
+		}
+	}
+
+	fmt.Println("Novo Slice com múltiplos de 3:", multiplosDe3)
+}
