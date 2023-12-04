@@ -1,0 +1,10 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {sliceInteiros := []int{1, 2, 3, 4, 5}
+	sliceInteiros = append(sliceInteiros[:2], sliceInteiros[3:]...)
+	fmt.Println("Slice resultante após remoção do terceiro elemento:", sliceInteiros)
+}
