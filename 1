@@ -1,0 +1,13 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	arrayInteiros := [3]int{2, 5, 8}
+	somaArray := 0
+	for _, valor := range arrayInteiros {
+		somaArray += valor
+	}
+	fmt.Printf("Soma dos elementos do Array: %d\n", somaArray)
