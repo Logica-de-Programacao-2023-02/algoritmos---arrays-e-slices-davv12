@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func main() {
+	slice := []string{"apple", "banana", "cherry", "date", "apple", "grape", "banana", "kiwi"}
+
+	var valor string
+	fmt.Print("Informe um valor: ")
+	fmt.Scan(&valor)
+
+	novoSlice := removerOcorrencias(slice, valor)
+
+	fmt.Println("Slice resultante:", novoSlice)
+}
+
+func removerOcorrencias(slice []string, valor string) []string {
+	resultado := make([]string, 0, len(slice))
+
+	for _, v := range slice {
+		if v != valor {
+			resultado = append(resultado, v)
+		}
+	}
+
+	return resultado
+}
